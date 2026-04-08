@@ -1,0 +1,43 @@
+---
+// HeroSection.astro — Main KV + Headline + Subheadline
+---
+
+<section class="w-full bg-black py-8 md:py-12 mt-1 md:mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Main KV — อยู่บนสุด เป็นสิ่งแรกที่คนเห็น -->
+    <!-- ปรับความกว้าง (บีบ margin) ให้รูปไม่ใหญ่จนเกินไปบนจอคอม และลบ md:min-h ออกเพื่อให้กรอบพอดีกับรูป 100% -->
+    <div class="relative w-full max-w-5xl mx-auto group overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_20px_50px_-12px_rgba(250,204,21,0.15)] border border-yellow-400/20 bg-zinc-900/40 flex items-center justify-center">
+      <!-- Background Ambient Glow -->
+      <div
+      class="relative w-full md:h-[80vh] overflow-hidden rounded-2xl md:rounded-3xl shadow-[0_20px_50px_-12px_rgba(250,204,21,0.15)] border border-yellow-400/20"
+    >
+      <img
+        src="/public/asset/images/mainkvbuc2.png"
+        alt="Exclusive Private Consult Key Visual"
+        class="w-full h-full object-cover object-center margin-2"
+        loading="eager"
+      />
+    </div>
+    </div>
+
+    <!-- Headline + Subheadline -->
+    <div class="max-w-3xl mx-auto text-center mt-10 px-6">
+      <p class="text-yellow-400 text-sm font-semibold uppercase tracking-widest mb-3">Bank Uncensored Online</p>
+      <h1 class="text-2xl md:text-4xl font-bold text-white leading-tight mb-6">
+        ก่อนจะถามว่า "กู้ผ่านไหม"<br class="hidden sm:block" />
+        คุณควรรู้ก่อนว่า ธุรกิจคุณ<br class="hidden sm:block" />
+        คือ <span class="text-yellow-400">"โอกาส"</span> หรือ <span class="text-red-400">"ความเสี่ยง"</span><br class="hidden sm:block" />
+        ในสายตาธนาคาร
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed mb-3">
+        คลาสออนไลน์ 4 ชั่วโมง สอนโดยอดีต RM ธนาคารกสิกร 7 ปี<br class="hidden md:block" />
+        ที่ปัจจุบันเป็นเจ้าของธุรกิจ ใช้สินเชื่อธนาคาร ลงทุนเป็นร้อยล้าน
+      </p>
+      <p class="text-gray-400 text-base">
+        เรียนจบ คุณจะ<span class="text-yellow-400 font-medium">เช็คตัวเองได้ทันที</span> ว่าพร้อมกู้แค่ไหน และต้องแก้อะไรก่อนเดินเข้าธนาคาร
+      </p>
+    </div>
+
+  </div>
+</section>

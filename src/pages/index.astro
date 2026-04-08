@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import OpeningPitch from '../components/OpeningPitch.astro';
+import WhatYoullLearn from '../components/WhatYoullLearn.astro';
+import WhoIsThisFor from '../components/WhoIsThisFor.astro';
+import AboutWin from '../components/AboutWin.astro';
+import TransformationTable from '../components/TransformationTable.astro';
+import BonusStack from '../components/BonusStack.astro';
+import PricingBlock from '../components/PricingBlock.astro';
+import ClosingCTA from '../components/ClosingCTA.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+
+<Layout title="Bank Uncensored Online | รู้แบงก์ รู้เรา เช็คความพร้อมก่อนการกู้" description="คลาสออนไลน์ 4 ชั่วโมง สอนโดยอดีต RM ธนาคาร 8 ปี เรียนจบ เช็คตัวเองได้ทันทีว่าพร้อมกู้แค่ไหน">
+  <main class="bg-black min-h-screen text-gray-50 flex flex-col selection:bg-yellow-400/30">
+    <HeroSection />
+    <OpeningPitch />
+    <WhatYoullLearn />
+    <WhoIsThisFor />
+    <AboutWin />
+    <TransformationTable />
+    <BonusStack />
+    <PricingBlock />
+    <ClosingCTA />
+    <ContactCTA />
+  </main>
+  <footer class="bg-black py-12 border-t border-red-500/20 text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} WinWin Wealth Creation. สงวนลิขสิทธิ์ทั้งหมด
+      </p>
+    </div>
+  </footer>
+</Layout>
