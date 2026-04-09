@@ -35,38 +35,81 @@
         ที่ปัจจุบันเป็นเจ้าของธุรกิจ ใช้สินเชื่อธนาคาร ลงทุนเป็นร้อยล้าน
       </p>
 
-      <!-- S2: รูปวิน 5 ใบ — เจ้าของธุรกิจจริง + ที่ปรึกษา + คลาส -->
-      <!-- Row 1: 3 รูป -->
-      <div class="grid grid-cols-3 gap-3 md:gap-4 mt-6">
-        <div class="relative w-full aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
-          <img src="/asset/images/win-ptt-team.jpg" alt="วินกับทีมงานที่ปั๊ม PTT" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
-        <div class="relative w-full aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
-          <img src="/asset/images/win-cafe-amazon.jpg" alt="วินกับธุรกิจ Cafe Amazon" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
-        <div class="relative w-full aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
-          <img src="/asset/images/win-7eleven.jpg" alt="วินในร้าน 7-Eleven" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
-      </div>
-      <!-- Row 2: 2 รูป -->
-      <div class="grid grid-cols-2 gap-3 md:gap-4 mt-3 md:mt-4 mb-6">
-        <div class="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
-          <img src="/asset/images/win-consult-client.jpg" alt="วินนั่งประชุมกับลูกค้า ดูเอกสาร" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
-        <div class="relative w-full aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
-          <img src="/asset/images/win-team-buc.jpg" alt="วินหน้าจอ Bank Uncensored" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
-        </div>
-      </div>
-
       <p class="text-gray-400 text-base">
         เรียนจบ คุณจะ<span class="text-yellow-400 font-medium">เช็คตัวเองได้ทันที</span> ว่าพร้อมกู้แค่ไหน และต้องแก้อะไรก่อนเดินเข้าธนาคาร
       </p>
     </div>
+
+    <!-- S2: รูปวิน — Mobile: auto-scroll slider / Desktop: grid 3 cols -->
+    <!-- Desktop: grid -->
+    <div class="max-w-5xl mx-auto mt-10 hidden sm:grid grid-cols-3 gap-4">
+      <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
+        <img src="/asset/images/win-ptt-team.jpg" alt="วินกับทีมงานที่ปั๊ม PTT" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+        <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-2xl transition-colors pointer-events-none"></div>
+      </div>
+      <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
+        <img src="/asset/images/win-cafe-amazon.jpg" alt="วินกับธุรกิจ Cafe Amazon" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+        <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-2xl transition-colors pointer-events-none"></div>
+      </div>
+      <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
+        <img src="/asset/images/win-7eleven.jpg" alt="วินในร้าน 7-Eleven" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+        <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-2xl transition-colors pointer-events-none"></div>
+      </div>
+    </div>
+
+    <!-- Mobile: auto-scroll slider -->
+    <div class="sm:hidden mt-8 relative overflow-hidden">
+      <div id="hero-slider" class="flex gap-3 overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 pb-4 -mx-4" style="scrollbar-width:none;-webkit-overflow-scrolling:touch;">
+        <div class="relative shrink-0 w-[80vw] aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-yellow-400/20">
+          <img src="/asset/images/win-ptt-team.jpg" alt="วินกับทีมงานที่ปั๊ม PTT" class="absolute inset-0 w-full h-full object-cover snap-center" loading="lazy" />
+          <div class="absolute inset-0 border border-yellow-400/20 rounded-xl pointer-events-none"></div>
+        </div>
+        <div class="relative shrink-0 w-[80vw] aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-yellow-400/20">
+          <img src="/asset/images/win-cafe-amazon.jpg" alt="วินกับธุรกิจ Cafe Amazon" class="absolute inset-0 w-full h-full object-cover snap-center" loading="lazy" />
+          <div class="absolute inset-0 border border-yellow-400/20 rounded-xl pointer-events-none"></div>
+        </div>
+        <div class="relative shrink-0 w-[80vw] aspect-[4/3] rounded-xl overflow-hidden bg-zinc-900 border border-yellow-400/20">
+          <img src="/asset/images/win-7eleven.jpg" alt="วินในร้าน 7-Eleven" class="absolute inset-0 w-full h-full object-cover snap-center" loading="lazy" />
+          <div class="absolute inset-0 border border-yellow-400/20 rounded-xl pointer-events-none"></div>
+        </div>
+      </div>
+      <!-- Dots indicator -->
+      <div class="flex justify-center gap-2 mt-3" id="hero-dots">
+        <span class="w-2 h-2 rounded-full bg-yellow-400 transition-colors"></span>
+        <span class="w-2 h-2 rounded-full bg-zinc-600 transition-colors"></span>
+        <span class="w-2 h-2 rounded-full bg-zinc-600 transition-colors"></span>
+      </div>
+    </div>
+
+    <script>
+      const slider = document.getElementById('hero-slider');
+      const dots = document.querySelectorAll('#hero-dots span');
+      if (slider && dots.length) {
+        // Auto-scroll
+        let current = 0;
+        const total = 3;
+        const auto = setInterval(() => {
+          current = (current + 1) % total;
+          const child = slider.children[current] as HTMLElement;
+          slider.scrollTo({ left: child.offsetLeft - 16, behavior: 'smooth' });
+        }, 3000);
+
+        // Update dots on scroll
+        slider.addEventListener('scroll', () => {
+          const scrollLeft = slider.scrollLeft;
+          const width = (slider.children[0] as HTMLElement).offsetWidth + 12;
+          const index = Math.round(scrollLeft / width);
+          dots.forEach((d, i) => {
+            d.classList.toggle('bg-yellow-400', i === index);
+            d.classList.toggle('bg-zinc-600', i !== index);
+          });
+          current = index;
+        });
+
+        // Pause on touch
+        slider.addEventListener('touchstart', () => clearInterval(auto), { passive: true });
+      }
+    </script>
 
   </div>
 </section>
