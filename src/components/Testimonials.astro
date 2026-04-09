@@ -1,5 +1,5 @@
 ---
-// Testimonials.astro — S12: placeholder คลิป + รูป testimonial
+// Testimonials.astro — S12: placeholder คลิป + รูป testimonial (IBtes)
 ---
 
 <section class="w-full bg-black py-16 md:py-24 border-t border-zinc-900">
@@ -17,57 +17,42 @@
       </div>
     </div>
 
-    <!-- Placeholder: ใส่คลิป และรูป Testimonial -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-
-      <!-- คลิป 1 -->
+    <!-- คลิป Testimonial — placeholder -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-6">
       <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
         <div class="text-center">
           <span class="text-gray-500 text-3xl block mb-2">🎥</span>
           <span class="text-gray-600 text-sm">คลิป Testimonial 1 — ใส่ทีหลัง</span>
         </div>
       </div>
-
-      <!-- คลิป 2 -->
       <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
         <div class="text-center">
           <span class="text-gray-500 text-3xl block mb-2">🎥</span>
           <span class="text-gray-600 text-sm">คลิป Testimonial 2 — ใส่ทีหลัง</span>
         </div>
       </div>
-
-      <!-- คลิป 3 -->
       <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
         <div class="text-center">
           <span class="text-gray-500 text-3xl block mb-2">🎥</span>
           <span class="text-gray-600 text-sm">คลิป Testimonial 3 — ใส่ทีหลัง</span>
         </div>
       </div>
-
-      <!-- รูป testimonial 1 -->
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🖼️</span>
-          <span class="text-gray-600 text-sm">รูป Testimonial / Review 1 — ใส่ทีหลัง</span>
-        </div>
-      </div>
-
-      <!-- รูป testimonial 2 -->
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🖼️</span>
-          <span class="text-gray-600 text-sm">รูป Testimonial / Review 2 — ใส่ทีหลัง</span>
-        </div>
-      </div>
-
-      <!-- รูป testimonial 3 -->
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🖼️</span>
-          <span class="text-gray-600 text-sm">รูป Testimonial / Review 3 — ใส่ทีหลัง</span>
-        </div>
-      </div>
-
     </div>
+
+    <!-- รูป Review — IBtes-2 ถึง IBtes-8 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+      {[2, 3, 4, 5, 6, 7, 8].map((n) => (
+        <div class="relative w-full aspect-[4/5] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
+          <img
+            src={`/asset/images/IBtes-${n}.jpg`}
+            alt={`Testimonial Review ${n - 1}`}
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 border border-yellow-400/20 group-hover:border-yellow-400/50 rounded-xl md:rounded-2xl transition-colors pointer-events-none"></div>
+        </div>
+      ))}
+    </div>
+
   </div>
 </section>
