@@ -1,27 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
+import MiniStoryHook from '../components/MiniStoryHook.astro';
 import OpeningPitch from '../components/OpeningPitch.astro';
 import WhatYoullLearn from '../components/WhatYoullLearn.astro';
 import WhoIsThisFor from '../components/WhoIsThisFor.astro';
 import AboutWin from '../components/AboutWin.astro';
 import TransformationTable from '../components/TransformationTable.astro';
+import Testimonials from '../components/Testimonials.astro';
 import BonusStack from '../components/BonusStack.astro';
 import PricingBlock from '../components/PricingBlock.astro';
+import ReframeClose from '../components/ReframeClose.astro';
+import FAQ from '../components/FAQ.astro';
 import ClosingCTA from '../components/ClosingCTA.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 ---
 
-<Layout title="Bank Uncensored Online | รู้แบงก์ รู้เรา เช็คความพร้อมก่อนการกู้" description="คลาสออนไลน์ 4 ชั่วโมง สอนโดยอดีต RM ธนาคาร 8 ปี เรียนจบ เช็คตัวเองได้ทันทีว่าพร้อมกู้แค่ไหน">
+<Layout title="Bank Uncensored Online | รู้แบงก์ รู้เรา เช็คความพร้อมก่อนการกู้" description="คลาสออนไลน์ 4 ชั่วโมง สอนโดยอดีต RM ธนาคาร 7 ปี เรียนจบ เช็คตัวเองได้ทันทีว่าพร้อมกู้แค่ไหน">
   <main class="bg-black min-h-screen text-gray-50 flex flex-col selection:bg-yellow-400/30">
     <HeroSection />
+    <MiniStoryHook />
     <OpeningPitch />
     <WhatYoullLearn />
+    <!-- Mid CTA -->
+    <section class="w-full bg-black py-8 text-center">
+      <a href="#pricing" class="inline-block bg-yellow-500 text-black font-bold py-4 px-10 rounded-full text-lg hover:bg-yellow-400 transition-all hover:scale-105 shadow-[0_4px_20px_rgba(234,179,8,0.4)]">
+        สมัครเลย — Insider Price 4,900.-
+      </a>
+    </section>
     <WhoIsThisFor />
     <AboutWin />
     <TransformationTable />
+    <Testimonials />
     <BonusStack />
-    <PricingBlock />
+    <PricingBlock id="pricing" />
+    <ReframeClose />
+    <FAQ />
     <ClosingCTA />
     <ContactCTA />
   </main>
