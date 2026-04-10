@@ -1,5 +1,27 @@
 ---
-// Testimonials.astro  S12: placeholder คลิป + รูป testimonial (IBtes)
+// Testimonials.astro  S12: 5 คลิป testimonial + รูป review (IBtes)
+const clips = [
+  {
+    src: "https://res.cloudinary.com/dzjum15hd/video/upload/v1775835560/bank-uncensored/Clip%20-%20Vox%20pop%20%E0%B8%A3%E0%B8%A7%E0%B8%A1%20_%E0%B8%82%E0%B8%B2%E0%B8%A2%20Bank%20online_.mp4",
+    label: "Vox Pop รวม",
+  },
+  {
+    src: "https://res.cloudinary.com/dzjum15hd/video/upload/v1775835566/bank-uncensored/Clip%20-%20%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%99%E0%B8%B4%E0%B8%A7_%E0%B8%82%E0%B8%B2%E0%B8%A2%20Bank%20online_.mp4",
+    label: "คุณนิว",
+  },
+  {
+    src: "https://res.cloudinary.com/dzjum15hd/video/upload/v1775835570/bank-uncensored/Clip%20-%20%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%A0%E0%B8%B1%E0%B8%AA%E0%B8%AA%E0%B8%A3_%E0%B8%82%E0%B8%B2%E0%B8%A2%20Bank%20online_.mp4",
+    label: "คุณภัสสร",
+  },
+  {
+    src: "https://res.cloudinary.com/dzjum15hd/video/upload/v1775835574/bank-uncensored/Clip%20-%20%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A1%E0%B8%ADAi_%E0%B8%82%E0%B8%B2%E0%B8%A2%20Bank%20online_.mp4",
+    label: "คุณหมอ Ai",
+  },
+  {
+    src: "https://res.cloudinary.com/dzjum15hd/video/upload/v1775835578/bank-uncensored/Clip%20-%20%E0%B8%84%E0%B8%B8%E0%B8%93%E0%B8%AD%E0%B8%B2%E0%B8%A0%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B9%8C_%E0%B8%82%E0%B8%B2%E0%B8%A2%20Bank%20online_.mp4",
+    label: "คุณอาภารัตน์",
+  },
+];
 ---
 
 <section class="w-full bg-black py-16 md:py-24 border-t border-zinc-900">
@@ -8,38 +30,51 @@
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
         ก่อนจะตัดสินใจ <br class="hidden sm:block" />
-        วินอยากให้คุณอ่าน และดูคลิปนักเรียนที่เคยเรียนมาแล้ว
+        วินอยากให้คุณดูคลิปนักเรียนที่เคยเรียนมาแล้ว
       </h2>
       <div class="max-w-2xl mx-auto space-y-2 text-gray-400 text-base md:text-lg">
         <p>ทุกเคสไม่ได้ "เรียนเคล็ดลับลับ" ทุกเคสไม่ได้ "ใช้เส้นใช้สาย"</p>
-        <p>ทุกเคสแค่<span class="text-white font-medium">เข้าใจว่าแบงก์เขาหาอะไร  แล้วเตรียมตัวให้ตรงกับสิ่งที่เขาหา</span></p>
-        <p class="text-gray-500">นั่นคือสิ่งที่คลาส Bank Uncensored Online จะสอนคุณค่ะ</p>
+        <p>ทุกเคสแค่<span class="text-white font-medium">เข้าใจว่าแบงก์เขาหาอะไร แล้วเตรียมตัวให้ตรงกับสิ่งที่เขาหา</span></p>
       </div>
     </div>
 
-    <!-- คลิป Testimonial  placeholder -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mb-6">
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🎥</span>
-          <span class="text-gray-600 text-sm">คลิป Testimonial 1  ใส่ทีหลัง</span>
-        </div>
+    <!-- คลิปตัวแรก ใหญ่เต็ม width -->
+    <div class="mb-6">
+      <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 shadow-[0_0_30px_-10px_rgba(250,204,21,0.15)]">
+        <video
+          class="w-full h-full object-cover"
+          controls
+          preload="metadata"
+          playsinline
+          poster=""
+        >
+          <source src={clips[0].src} type="video/mp4" />
+        </video>
       </div>
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🎥</span>
-          <span class="text-gray-600 text-sm">คลิป Testimonial 2  ใส่ทีหลัง</span>
-        </div>
-      </div>
-      <div class="w-full aspect-video bg-zinc-800 border border-dashed border-zinc-600 rounded-xl flex items-center justify-center">
-        <div class="text-center">
-          <span class="text-gray-500 text-3xl block mb-2">🎥</span>
-          <span class="text-gray-600 text-sm">คลิป Testimonial 3  ใส่ทีหลัง</span>
-        </div>
-      </div>
+      <p class="text-center text-gray-400 text-sm mt-2">{clips[0].label}</p>
     </div>
 
-    <!-- รูป Review  IBtes-2 ถึง IBtes-8 -->
+    <!-- คลิปที่ 2-5: grid 2x2 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 mb-10">
+      {clips.slice(1).map((clip) => (
+        <div>
+          <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800">
+            <video
+              class="w-full h-full object-cover"
+              controls
+              preload="metadata"
+              playsinline
+              poster=""
+            >
+              <source src={clip.src} type="video/mp4" />
+            </video>
+          </div>
+          <p class="text-center text-gray-400 text-sm mt-2">{clip.label}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- รูป Review IBtes-2 ถึง IBtes-8 -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
       {[2, 3, 4, 5, 6, 7, 8].map((n) => (
         <div class="relative w-full aspect-[4/5] rounded-xl md:rounded-2xl overflow-hidden bg-zinc-900 border border-yellow-400/20 group">
