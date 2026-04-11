@@ -85,14 +85,17 @@
       const slider = document.getElementById('hero-slider');
       const dots = document.querySelectorAll('#hero-dots span');
       if (slider && dots.length) {
-        // Auto-scroll
         let current = 0;
         const total = 3;
-        const auto = setInterval(() => {
-          current = (current + 1) % total;
-          const child = slider.children[current] as HTMLElement;
-          slider.scrollTo({ left: child.offsetLeft - 16, behavior: 'smooth' });
-        }, 3000);
+        // delay auto-scroll ให้หน้าโหลดเสร็จก่อน
+        let auto: ReturnType<typeof setInterval>;
+        setTimeout(() => {
+          auto = setInterval(() => {
+            current = (current + 1) % total;
+            const child = slider.children[current] as HTMLElement;
+            slider.scrollTo({ left: child.offsetLeft - 16, behavior: 'smooth' });
+          }, 3000);
+        }, 2000);
 
         // Update dots on scroll
         slider.addEventListener('scroll', () => {
